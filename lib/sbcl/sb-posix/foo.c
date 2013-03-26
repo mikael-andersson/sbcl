@@ -1338,6 +1338,12 @@ int main(int argc, char *argv[]) {
     fprintf (out, "(sb-int:style-warn \"Couldn't grovel for MAP_FIXED (unknown to the C compiler).\")\n");
 #endif
     fprintf (out, "(cl:export 'MAP-FIXED)\n");
+#ifdef MAP_ANON
+    fprintf (out, "(cl:defconstant MAP-ANON %d \"mmap: anonymous mapping not associated with any file\")\n", MAP_ANON);
+#else
+    fprintf (out, "(sb-int:style-warn \"Couldn't grovel for MAP_ANON (unknown to the C compiler).\")\n");
+#endif
+    fprintf (out, "(cl:export 'MAP-ANON)\n");
 #ifdef MS_ASYNC
     fprintf (out, "(cl:defconstant MS-ASYNC %d \"msync: return immediately\")\n", MS_ASYNC);
 #else

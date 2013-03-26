@@ -350,7 +350,7 @@
 (cl:defconstant EAI-BADFLAGS -1 "NIL")
 (cl:defconstant EAI-NONAME -2 "NIL")
 (cl:defconstant EAI-SERVICE -8 "NIL")
-(sb-int:style-warn "Couldn't grovel for EAI_ADDRFAMILY (unknown to the C compiler).")
+(cl:defconstant EAI-ADDRFAMILY -9 "NIL")
 (cl:defconstant EAI-MEMORY -10 "NIL")
 (cl:defconstant EAI-FAIL -4 "NIL")
 (cl:defconstant EAI-AGAIN -3 "NIL")
